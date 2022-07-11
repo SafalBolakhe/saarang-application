@@ -1,6 +1,8 @@
 package com.anigraphy.thesaarang
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.MotionEvent
@@ -12,6 +14,8 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 
 
 var url = "https://thesaarang.com/"
@@ -19,7 +23,7 @@ var url = "https://thesaarang.com/"
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -63,7 +67,19 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.qrbutton)
         button.setOnClickListener(){
             val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent);
+            if (ContextCompat.checkSelfPermission(this,
+                    android.Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+                if (ContextCompat.checkSelfPermission(this,
+                    android.Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(this@MainActivity,
+                        arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.CAMERA), 1)
+                }
+            }
+            else {
+                startActivity(intent);
+            }
 //            finish();
     }
     }

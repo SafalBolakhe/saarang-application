@@ -36,7 +36,7 @@ class SecondActivity : AppCompatActivity() {
             runOnUiThread {
                 url = it.text
                 val intent = Intent(this, MainActivity::class.java)
-//                finish();
+                finish();
                 startActivity(intent);
 
             }
