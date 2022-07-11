@@ -1,4 +1,4 @@
-package com.anigraphy.thesaarang
+package com.saarang.thesaarang
 
 import org.junit.Test
 

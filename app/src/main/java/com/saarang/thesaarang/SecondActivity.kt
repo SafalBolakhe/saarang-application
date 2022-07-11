@@ -1,4 +1,4 @@
-package com.anigraphy.thesaarang
+package com.saarang.thesaarang
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +10,7 @@ import com.budiyev.android.codescanner.CodeScannerView
 import com.budiyev.android.codescanner.DecodeCallback
 import com.budiyev.android.codescanner.ErrorCallback
 import com.budiyev.android.codescanner.ScanMode
-import com.anigraphy.thesaarang.R
+import com.saarang.thesaarang.R
 
 class SecondActivity : AppCompatActivity() {
     private lateinit var codeScanner: CodeScanner

@@ -1,4 +1,4 @@
-package com.anigraphy.thesaarang
+package com.saarang.thesaarang
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

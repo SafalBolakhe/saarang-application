@@ -1,4 +1,4 @@
-package com.anigraphy.thesaarang
+package com.saarang.thesaarang
 
 import android.Manifest
 import android.content.Intent
@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
                     android.Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED){
                     ActivityCompat.requestPermissions(this@MainActivity,
-                        arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.CAMERA), 1)
+                        arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.CAMERA, Manifest.permission.ACCESS_COARSE_LOCATION), 1)
                 }
             }
             else {
