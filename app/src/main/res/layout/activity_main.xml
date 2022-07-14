@@ -14,12 +14,14 @@
 
     <Button
         android:id="@+id/qrbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/black"
-        android:padding="23dp"
-        android:text="@string/qr_scanner" />
+        android:layout_margin="10dp"
+        android:background="@drawable/roundbtn"
+        android:padding="20px"
+        android:text="@string/qr_scanner"
+        android:textSize="11dp" />
 
 </RelativeLayout>
